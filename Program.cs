@@ -1,6 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
-using ConsoleApp1.Math.Implementations;
+﻿using ConsoleApp1.Math.Implementations;
 
 Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
 Console.WriteLine("DevOps Engineer: hubert-cywka");
