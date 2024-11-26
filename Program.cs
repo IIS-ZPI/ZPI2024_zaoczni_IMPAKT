@@ -1,6 +1,17 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
-Console.WriteLine("DevOps Engineer: hubert-cywka");
-Console.WriteLine("Dev1: tirey93");
-Console.WriteLine("Dev2: lukasz-kkk");
-Console.WriteLine("Tester: BeastRacid");
+﻿using IMPAKT.Labs;
+using IMPAKT.Settings;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+
+var configuration = new ConfigurationBuilder()
+           .AddJsonFile("appsettings.json")
+           .Build();
+
+var serviceProvider = new ServiceCollection()
+    .Configure<MainSettings>(configuration.GetSection(nameof(MainSettings)))
+    .AddTransient<Lab1>()
+    .BuildServiceProvider();
+
+var lab1 = serviceProvider.GetRequiredService<Lab1>();
+
+lab1.Execute();
