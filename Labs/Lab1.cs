@@ -21,7 +21,9 @@ namespace IMPAKT.Labs
 
             var firstOperand = 10;
             var secondOperand = 5;
-            ExecuteArithmeticOperations(firstOperand, secondOperand);
+            Console.WriteLine("** Arithmetic operations **");
+            ExecuteAdditionOperations(firstOperand, secondOperand);
+            ExecuteDifferenceOperations(firstOperand, secondOperand);
         }
 
         private void DescribeGroup()
@@ -33,12 +35,16 @@ namespace IMPAKT.Labs
             Console.WriteLine("Tester: BeastRacid");
         }
 
-        private void ExecuteArithmeticOperations(double a, double b)
+        private void ExecuteAdditionOperations(double a, double b)
         {
-            Console.WriteLine("** Arithmetic operations **");
             var additionResult = _mathService.Addition(a, b);
             
             Console.WriteLine("Addition: {0} + {1} = {2}", a, b, additionResult);
+        }
+        private void ExecuteDifferenceOperations(double a, double b)
+        {
+            var additionResult = _mathService.Difference(a, b);
+            Console.WriteLine("Difference: {0} - {1} = {2}", a, b, additionResult);
         }
     }
 }
