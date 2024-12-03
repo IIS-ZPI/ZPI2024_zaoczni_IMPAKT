@@ -1,6 +1,6 @@
 ﻿namespace IMPAKT.Math.Interfaces;
 
-public interface IMathService : IArithmeticsAdd
+public interface IMathService : IArithmeticsAdd, IArithmeticsDiff
 {
     
 }
