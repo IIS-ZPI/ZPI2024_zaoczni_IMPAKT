@@ -13,4 +13,9 @@ class MathService : IMathService
     {
         return a - b;
     }
+
+    public double Multiplication(double a, double b)
+    {
+        return a * b;
+    }
 }
