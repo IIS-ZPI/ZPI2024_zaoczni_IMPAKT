@@ -25,6 +25,7 @@ namespace IMPAKT.Labs
             ExecuteAdditionOperations(firstOperand, secondOperand);
             ExecuteDifferenceOperations(firstOperand, secondOperand);
             ExecuteMultiplicationOperations(firstOperand, secondOperand);
+            ExecuteDivisionOperations(firstOperand, secondOperand);
         }
 
         private void DescribeGroup()
@@ -52,6 +53,12 @@ namespace IMPAKT.Labs
         {
             var multiplicationResult = _mathService.Multiplication(a, b);
             Console.WriteLine("Multiplication: {0} * {1} = {2}", a, b, multiplicationResult);
+        }
+
+        private void ExecuteDivisionOperations(double a, double b)
+        {
+            var divisionResult = _mathService.Division(a, b);
+            Console.WriteLine("Division: {0} * {1} = {2}", a, b, divisionResult);
         }
     }
 }
