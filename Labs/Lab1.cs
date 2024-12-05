@@ -25,6 +25,7 @@ namespace IMPAKT.Labs
             ExecuteAdditionOperations(firstOperand, secondOperand);
             ExecuteDifferenceOperations(firstOperand, secondOperand);
             ExecuteMultiplicationOperations(firstOperand, secondOperand);
+            ExecuteDivisionOperations(firstOperand, secondOperand);
         }
 
         private void DescribeGroup()
