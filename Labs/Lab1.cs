@@ -47,6 +47,7 @@ namespace IMPAKT.Labs
             var differenceResult = _mathService.Difference(a, b);
             Console.WriteLine("Difference: {0} - {1} = {2}", a, b, differenceResult);
         }
+        //feature_Lab1_Zad5_comment2_dev1
 
         private void ExecuteMultiplicationOperations(double a, double b)
         {
