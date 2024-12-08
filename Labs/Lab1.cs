@@ -18,7 +18,7 @@ namespace IMPAKT.Labs
         public void Execute()
         {
             DescribeGroup();
-
+            // Below operands will be used for arithmetics operations
             var firstOperand = 10;
             var secondOperand = 5;
             Console.WriteLine("** Arithmetic operations **");
