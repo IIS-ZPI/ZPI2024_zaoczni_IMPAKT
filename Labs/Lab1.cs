@@ -27,6 +27,7 @@ namespace IMPAKT.Labs
             ExecuteDifferenceOperations(firstOperand, secondOperand);
             ExecuteMultiplicationOperations(firstOperand, secondOperand);
             ExecuteDivisionOperations(firstOperand, secondOperand);
+            //comment 2
         }
 
         private void DescribeGroup()
@@ -37,11 +38,14 @@ namespace IMPAKT.Labs
             Console.WriteLine("Dev1: tirey93");
             Console.WriteLine("Dev2: lukasz-kkk");
             Console.WriteLine("Tester: BeastRacid");
+            //dev3 comment b1
         }
-
+        //feature_Lab1_Zad5_comment3_dev1
         private void ExecuteAdditionOperations(double a, double b)
         {
             var additionResult = _mathService.Addition(a, b);
+
+            //comment 3
             
             Console.WriteLine("Addition: {0} + {1} = {2}", a, b, additionResult);
         }
@@ -50,6 +54,7 @@ namespace IMPAKT.Labs
             var differenceResult = _mathService.Difference(a, b);
             Console.WriteLine("Difference: {0} - {1} = {2}", a, b, differenceResult);
         }
+        //feature_Lab1_Zad5_comment2_dev1
 
         private void ExecuteMultiplicationOperations(double a, double b)
         {
@@ -57,10 +62,12 @@ namespace IMPAKT.Labs
             Console.WriteLine("Multiplication: {0} * {1} = {2}", a, b, multiplicationResult);
         }
 
+        // The code below tests the division operation
         private void ExecuteDivisionOperations(double a, double b)
         {
             var divisionResult = _mathService.Division(a, b);
             Console.WriteLine("Division: {0} * {1} = {2}", a, b, divisionResult);
         }
+        //feature_Lab1_Zad5_comment1_dev1
     }
 }
