@@ -2,8 +2,6 @@
 using IMPAKT.Settings;
 using Microsoft.Extensions.Options;
 
-// Pleas read the code carefully, it's very complicated!
-
 namespace IMPAKT.Labs
 {
     public class Lab1
