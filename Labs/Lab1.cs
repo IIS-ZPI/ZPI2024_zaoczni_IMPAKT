@@ -6,6 +6,7 @@ namespace IMPAKT.Labs
 {
     public class Lab1
     {
+        // TODO: finish this class
         private readonly MainSettings _mainSettings;
         private readonly IMathService _mathService;
 
@@ -18,7 +19,7 @@ namespace IMPAKT.Labs
         public void Execute()
         {
             DescribeGroup();
-
+            // Below operands will be used for arithmetics operations
             var firstOperand = 10;
             var secondOperand = 5;
             Console.WriteLine("** Arithmetic operations **");
@@ -30,6 +31,7 @@ namespace IMPAKT.Labs
 
         private void DescribeGroup()
         {
+            // Display team info
             Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
             Console.WriteLine("DevOps Engineer: hubert-cywka");
             Console.WriteLine("Dev1: tirey93");
