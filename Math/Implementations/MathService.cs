@@ -18,4 +18,10 @@ class MathService : IMathService
     {
         return a * b;
     }
+
+    // Method below divides 'a' by 'b'.
+    public double Division(double a, double b)
+    {
+        return a / b;
+    }
 }
