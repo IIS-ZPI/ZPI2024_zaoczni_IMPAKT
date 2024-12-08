@@ -6,6 +6,7 @@ namespace IMPAKT.Labs
 {
     public class Lab1
     {
+        // TODO: _mainSettings is not used, consider removing it
         private readonly MainSettings _mainSettings;
         private readonly IMathService _mathService;
 
