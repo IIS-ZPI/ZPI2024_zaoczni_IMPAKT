@@ -53,5 +53,5 @@ namespace IMPAKT.Labs
             var multiplicationResult = _mathService.Multiplication(a, b);
             Console.WriteLine("Multiplication: {0} * {1} = {2}", a, b, multiplicationResult);
         }
-    }
+    }//feature_Lab1_Zad5_comment1_dev1
 }
