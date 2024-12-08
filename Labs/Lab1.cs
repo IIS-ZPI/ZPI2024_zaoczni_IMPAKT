@@ -40,6 +40,8 @@ namespace IMPAKT.Labs
         private void ExecuteAdditionOperations(double a, double b)
         {
             var additionResult = _mathService.Addition(a, b);
+
+            //comment 3
             
             Console.WriteLine("Addition: {0} + {1} = {2}", a, b, additionResult);
         }
