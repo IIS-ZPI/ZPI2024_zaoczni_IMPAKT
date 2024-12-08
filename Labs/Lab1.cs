@@ -18,7 +18,7 @@ namespace IMPAKT.Labs
         public void Execute()
         {
             DescribeGroup();
-            // comment to be reverted
+
             var firstOperand = 10;
             var secondOperand = 5;
             Console.WriteLine("** Arithmetic operations **");
@@ -42,6 +42,8 @@ namespace IMPAKT.Labs
         private void ExecuteAdditionOperations(double a, double b)
         {
             var additionResult = _mathService.Addition(a, b);
+
+            //comment 3
             
             Console.WriteLine("Addition: {0} + {1} = {2}", a, b, additionResult);
         }
