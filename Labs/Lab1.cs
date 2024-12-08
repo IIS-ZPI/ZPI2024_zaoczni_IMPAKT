@@ -18,7 +18,7 @@ namespace IMPAKT.Labs
         public void Execute()
         {
             DescribeGroup();
-
+            // Below operands will be used for arithmetics operations
             var firstOperand = 10;
             var secondOperand = 5;
             Console.WriteLine("** Arithmetic operations **");
@@ -27,7 +27,7 @@ namespace IMPAKT.Labs
             ExecuteMultiplicationOperations(firstOperand, secondOperand);
             ExecuteDivisionOperations(firstOperand, secondOperand);
         }
-
+        //feature_Lab1_Zad6_dev1
         private void DescribeGroup()
         {
             Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
@@ -35,6 +35,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Dev1: tirey93");
             Console.WriteLine("Dev2: lukasz-kkk");
             Console.WriteLine("Tester: BeastRacid");
+            //dev3 comment b1
         }
 
         private void ExecuteAdditionOperations(double a, double b)
