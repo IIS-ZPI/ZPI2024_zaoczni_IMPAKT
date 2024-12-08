@@ -35,6 +35,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Dev1: tirey93");
             Console.WriteLine("Dev2: lukasz-kkk");
             Console.WriteLine("Tester: BeastRacid");
+            //dev3 comment b1
         }
 
         private void ExecuteAdditionOperations(double a, double b)
