@@ -30,6 +30,7 @@ namespace IMPAKT.Labs
 
         private void DescribeGroup()
         {
+            // Display team info
             Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
             Console.WriteLine("DevOps Engineer: hubert-cywka");
             Console.WriteLine("Dev1: tirey93");
