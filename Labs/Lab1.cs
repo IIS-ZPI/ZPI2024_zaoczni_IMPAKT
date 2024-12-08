@@ -27,7 +27,7 @@ namespace IMPAKT.Labs
             ExecuteMultiplicationOperations(firstOperand, secondOperand);
             ExecuteDivisionOperations(firstOperand, secondOperand);
         }
-
+        //feature_Lab1_Zad6_dev1
         private void DescribeGroup()
         {
             Console.WriteLine("Nazwa grupy: Impakt. Scrum master: tirey93.");
