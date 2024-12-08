@@ -6,6 +6,7 @@ namespace IMPAKT.Labs
 {
     public class Lab1
     {
+        // TODO: finish this class
         private readonly MainSettings _mainSettings;
         private readonly IMathService _mathService;
 
