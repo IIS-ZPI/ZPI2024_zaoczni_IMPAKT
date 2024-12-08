@@ -35,7 +35,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Dev2: lukasz-kkk");
             Console.WriteLine("Tester: BeastRacid");
         }
-
+        //feature_Lab1_Zad5_comment3_dev1
         private void ExecuteAdditionOperations(double a, double b)
         {
             var additionResult = _mathService.Addition(a, b);
