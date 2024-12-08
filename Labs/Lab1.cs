@@ -6,6 +6,7 @@ namespace IMPAKT.Labs
 {
     public class Lab1
     {
+        // TODO: _mainSettings is not used, consider removing it
         private readonly MainSettings _mainSettings;
         private readonly IMathService _mathService;
 
@@ -35,6 +36,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Dev1: tirey93");
             Console.WriteLine("Dev2: lukasz-kkk");
             Console.WriteLine("Tester: BeastRacid");
+            // TODO: Add 3rd developer name
         }
 
         private void ExecuteAdditionOperations(double a, double b)
