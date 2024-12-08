@@ -6,6 +6,7 @@ namespace IMPAKT.Labs
 {
     public class Lab1
     {
+        // TODO: _mainSettings is not used, consider removing it
         private readonly MainSettings _mainSettings;
         private readonly IMathService _mathService;
 
@@ -59,6 +60,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Multiplication: {0} * {1} = {2}", a, b, multiplicationResult);
         }
 
+        // The code below tests the division operation
         private void ExecuteDivisionOperations(double a, double b)
         {
             var divisionResult = _mathService.Division(a, b);
