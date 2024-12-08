@@ -55,6 +55,7 @@ namespace IMPAKT.Labs
             Console.WriteLine("Multiplication: {0} * {1} = {2}", a, b, multiplicationResult);
         }
 
+        // The code below tests the division operation
         private void ExecuteDivisionOperations(double a, double b)
         {
             var divisionResult = _mathService.Division(a, b);
