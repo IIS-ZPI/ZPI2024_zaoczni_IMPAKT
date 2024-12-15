@@ -5,9 +5,8 @@ on:
     types: [opened, synchronize, reopened]
     branches: ["main", "release", "develop"]
     paths:
-      - "services/**"
-      - ".github/workflows/service.*.yml"
-      - ".github/workflows/services.*.yml"
+      - "app/**"
+      - ".github/workflows/build.yml"
 
 concurrency:
   group: ${{ github.ref }}
