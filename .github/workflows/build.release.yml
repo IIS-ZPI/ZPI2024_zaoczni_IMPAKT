@@ -1,0 +1,37 @@
+﻿name: Build (release)
+
+on:
+  push:
+    branches: ["release"]
+
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true
+
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.x
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run unit tests
+        run: pytest
+
+#      - name: Deploy on release branch
+#        if: github.ref == 'refs/heads/release'
+#        run: |
+#          echo "Creating new release tag for release branch"
+#          RELEASE_VERSION=$(git describe --tags --abbrev=0 --match "v[0-9]*" | awk -F. '{$NF+=1; OFS="."; print}')
+#          git tag -a "v$RELEASE_VERSION" -m "Release v$RELEASE_VERSION"
+#          git push origin "v$RELEASE_VERSION"
+

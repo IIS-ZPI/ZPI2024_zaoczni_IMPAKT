@@ -1,0 +1,9 @@
+﻿# Secrets
+**/.secrets
+**/.env
+
+# IDE
+.idea
+
+bin
+obj
