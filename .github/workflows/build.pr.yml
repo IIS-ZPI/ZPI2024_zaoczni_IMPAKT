@@ -24,11 +24,11 @@ jobs:
       - name: Run unit tests
         run: python -m unittest discover
         
-    mark-as-ready:
-      needs: [ run-unit-tests ]
-      runs-on: ubuntu-latest
-      if: ${{ !failure() && !cancelled() && github.event.pull_request != null }}
-      steps:
-        - name: Echo success message
-          run: |
-            echo "All OK."
+  mark-as-ready:
+    needs: [ run-unit-tests ]
+    runs-on: ubuntu-latest
+    if: ${{ !failure() && !cancelled() && github.event.pull_request != null }}
+    steps:
+      - name: Echo success message
+        run: |
+          echo "All OK."
