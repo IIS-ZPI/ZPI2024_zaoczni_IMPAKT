@@ -1,6 +1,5 @@
 import requests
-from datetime import datetime, timedelta
-import common
+from datetime import datetime
 
 class NBPApiCaller:
     BASE_URL = "https://api.nbp.pl/api/exchangerates/rates/A/"
@@ -8,9 +7,7 @@ class NBPApiCaller:
     def __init__(self):
         pass
 
-    def fetch_exchange_rate(self, base_currency: str, quote_currency: str, data_range: str):
-        end_date = datetime.now()
-        start_date = end_date - timedelta(days=common.DATA_RANGES[data_range])
+    def fetch_exchange_rate(self, base_currency: str, quote_currency: str, start_date: datetime, end_date: datetime):
 
         start_date_str = start_date.strftime("%Y-%m-%d")
         end_date_str = end_date.strftime("%Y-%m-%d")
