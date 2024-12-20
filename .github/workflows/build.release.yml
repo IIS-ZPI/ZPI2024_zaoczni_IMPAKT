@@ -21,11 +21,8 @@ jobs:
         with:
           python-version: 3.x
 
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-
       - name: Run unit tests
-        run: pytest
+        run: python -m unittest discover
 
 #      - name: Deploy on release branch
 #        if: github.ref == 'refs/heads/release'
