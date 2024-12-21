@@ -8,36 +8,17 @@ concurrency:
   group: ${{ github.ref }}
   cancel-in-progress: true
 
-
 jobs:
-  run-unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+  run-tests:
+    uses: ./.github/workflows/unit-tests.yml
+    with:
+      python-version: 3.x
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Run unit tests
-        run: python -m unittest discover
-    
   mark-as-ready:
-    needs: [ run-unit-tests ]
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
-    if: ${{ !failure() && !cancelled() && github.event.pull_request != null }}
+    if: ${{ !failure() && !cancelled() }}
     steps:
       - name: Echo success message
         run: |
           echo "All OK."
-
-#      - name: Deploy on release branch
-#        if: github.ref == 'refs/heads/release'
-#        run: |
-#          echo "Creating new release tag for release branch"
-#          RELEASE_VERSION=$(git describe --tags --abbrev=0 --match "v[0-9]*" | awk -F. '{$NF+=1; OFS="."; print}')
-#          git tag -a "v$RELEASE_VERSION" -m "Release v$RELEASE_VERSION"
-#          git push origin "v$RELEASE_VERSION"
-

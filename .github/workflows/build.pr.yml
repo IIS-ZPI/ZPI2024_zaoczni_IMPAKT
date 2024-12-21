@@ -10,22 +10,13 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  run-unit-tests:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Check out code
-        uses: actions/checkout@v2
+  run-tests:
+    uses: ./.github/workflows/unit-tests.yml
+    with:
+      python-version: 3.x
 
-      - name: Set up Python
-        uses: actions/setup-python@v2
-        with:
-          python-version: 3.x
-
-      - name: Run unit tests
-        run: python -m unittest discover
-        
   mark-as-ready:
-    needs: [ run-unit-tests ]
+    needs: [ run-tests ]
     runs-on: ubuntu-latest
     if: ${{ !failure() && !cancelled() && github.event.pull_request != null }}
     steps:
