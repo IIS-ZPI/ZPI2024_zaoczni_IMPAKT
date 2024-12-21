@@ -8,7 +8,6 @@ on:
         required: false
         type: string
         default: '3.x'
-    secrets: inherit
 
 jobs:
   run-unit-tests:
